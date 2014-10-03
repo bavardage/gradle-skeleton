@@ -1,0 +1,18 @@
+buildscript {
+    repositories {
+	mavenCentral()
+    }
+}
+
+apply from: "$rootDir/gradle/java.gradle"
+apply from: "$rootDir/gradle/idea.gradle"
+apply from: "$rootDir/gradle/eclipse.gradle"
+
+compileJava.sourceCompatibility "1.7"
+compileJava.targetCompatibility "1.7"
+
+
+dependencies {
+   'org.apache.flink:flink-scala:0.6.1-incubating'
+   'org.apache.flink:flink-clients:0.6.1-incubating'
+}
